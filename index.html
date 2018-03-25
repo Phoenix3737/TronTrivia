@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trivia Game</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div id="header"><img src="assets/image/tronLogo.png" alt="tron" height="200" width="450"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div id="clock">&nbsp;</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div id="message"></div>
+            </div>
+        </div>
+        <div class="row start">
+            <div class="col-xs-12 text-center">
+                <button type="button" id="start-btn" class="btn">START</button>
+            </div>
+        </div>
+        <div class="row start">
+            <div class="col-xs-12 text-center">
+                <div id="score" class="text-center"></div>
+            </div>
+        </div>
+        <div class="row game-over">
+            <div class="col-xs-12 text-center">
+                <div>Game Over</div>   
+                <button type="button" id="play-again-btn" class="btn">Play Again</button>
+            </div>
+        </div>
+
+       
+        <div id="gameScreen" class="text-center"></div>
+     
+
+
+    </div>
+    <script src="assets/javascript/app.js"></script>
+</body>
+
+</html>

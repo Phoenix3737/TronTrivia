@@ -1,0 +1,101 @@
+body {
+    background-image: url("C:/Users/Mark/bootcamp/TriviaGame/assets/image/tronGrid.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+    color: #00c1c2;
+}
+
+.question {
+    font-size: 40px;
+    text-align: center;
+    border-bottom: 3px solid #00c1c2 
+}
+
+.answers {
+    font-size: 30px;
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 800px;   
+} 
+
+ol {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#clock {
+    margin-top: 25px;
+    font-size: 50px;
+    text-align: center;
+}
+
+#header {
+    text-align: center;
+    font-size: 80px;
+    padding-right: 20px;
+}
+
+
+.game-over {
+    font-size: 80px;
+    text-align: center;
+}
+
+.btn {
+    font-size: 24px;
+    margin-bottom: 5px;
+    background-color: black;
+    text-align: center;
+}
+
+.btn:hover {
+    color: white;
+}
+
+#start-btn {
+    font-size: 50px;
+    background-color: #00c1c2;
+    color: black;
+    margin-top: 65px; 
+}
+
+#start-btn:hover {
+    font-size: 50px;
+    background-color: white;
+}
+
+#play-again-btn {
+    font-size: 50px;
+    background-color: #00c1c2;
+    color: black;
+}
+
+#play-again-btn:hover {
+    font-size: 50px;
+    background-color: white;
+}
+
+
+#gameScreen {
+
+}
+
+#score {
+    font-size: 38px;
+    margin: 25px 0px;
+}
+ #message {
+    margin-top: 25px;
+    font-size: 30px;
+    text-align: center;
+ }
+
+
+
+
+
+
