@@ -2,7 +2,7 @@ var correctCount = 0;
 var wrongCount = 0;
 var unansweredCount = 0;
 var currentQuestionIndex = 0;
-
+var disabled = false;
 var x;
 
 var data = [
@@ -57,7 +57,7 @@ var data = [
         correctAnswer: 2
     },
     {
-        question: "Who wrote the novelitization of TRON?",
+        question: "Who wrote the novelization of TRON?",
         answers:[
             "Ernest Hemmingway",
             "Brian Daley",
@@ -98,7 +98,6 @@ function next() {
     currentQuestionIndex++;
     if(currentQuestionIndex < data.length) {
         $("#gameScreen").html(getTemplate(data[currentQuestionIndex]));
-        registerClick();
     }
     else {
         clearInterval(x);
@@ -107,20 +106,24 @@ function next() {
         $('#clock').hide()
         $("#score").html("Correct answers: " + correctCount + " &nbsp; &nbsp; Incorrect answers: " + wrongCount + " &nbsp; &nbsp; Unanswered: " + unansweredCount);
     };
+    disabled = false;
 }
 
 function registerClick(){
-    $(document).one("click",".answers li", function() {
-        clearInterval(x);
-        var index = $(this).index();
-        var correctAnswerIndex = data[currentQuestionIndex].correctAnswer;
-        if(index === correctAnswerIndex){
-            correctCount++;
-            showMessage("Correct!");
-        }
-        else{
-            wrongCount++;
-            showMessage("Wrong! " + data[currentQuestionIndex].answers[correctAnswerIndex]);
+    $(document).on("click",".answers li", function() {
+        if (!disabled) {
+            clearInterval(x);
+            var index = $(this).index();
+            var correctAnswerIndex = data[currentQuestionIndex].correctAnswer;
+            if(index === correctAnswerIndex) {
+                correctCount++;
+                showMessage("Correct!");
+            }
+            else{
+                wrongCount++;
+                showMessage("Wrong! " + data[currentQuestionIndex].answers[correctAnswerIndex]);
+            }
+            disabled = true;
         }
     });
 }
