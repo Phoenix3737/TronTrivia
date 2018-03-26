@@ -19,7 +19,7 @@ var data = [
     {
         question: "Why did many Disney animators refuse to work on the film?",
         answers:[
-            "They wanted to work on projects for the soon to be launched Disney Channel.",
+            "They wanted to work on projects for the new Disney Channel.",
             "The Animator's Guild was planning a strike.",
             "They hated working with actors.",
             "They feared that computers would one day put them out of business."
@@ -75,7 +75,7 @@ function next() {
         $("#gameScreen").hide()
         $(".game-over").show()
         $('#clock').hide()
-        $("#score").html("Answered Correctly: " + correctCount + " &nbsp; &nbsp; Answered Wrong: " + wrongCount + " &nbsp; &nbsp; Unanswered: " + unansweredCount);
+        $("#score").html("Correct answers: " + correctCount + " &nbsp; &nbsp; Incorrect answers: " + wrongCount + " &nbsp; &nbsp; Unanswered: " + unansweredCount);
     };
 }
 

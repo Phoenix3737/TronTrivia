@@ -1,4 +1,5 @@
 body {
+    font-family: 'VT323', monospace;
     background-image: url("../image/tronGrid.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -7,20 +8,24 @@ body {
 }
 
 .question {
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
     border-bottom: 3px solid #00c1c2 
 }
 
 .answers {
-    font-size: 30px;
+    font-size: 20px;
     display: inline-block;
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     width: 800px;   
-} 
+}
+
+.graphic{
+    padding-right: 74px;
+}
 
 ol {
     list-style-type: none;
@@ -29,19 +34,19 @@ ol {
 
 #clock {
     margin-top: 25px;
-    font-size: 50px;
+    font-size: 40px;
     text-align: center;
 }
 
 #header {
-    text-align: center;
+    /* text-align: center;
     font-size: 80px;
-    padding-right: 20px;
+    padding-right: 20px; */
 }
 
 
 .game-over {
-    font-size: 80px;
+    font-size: 70px;
     text-align: center;
 }
 
@@ -57,42 +62,42 @@ ol {
 }
 
 #start-btn {
-    font-size: 50px;
+    font-size: 40px;
     background-color: #00c1c2;
     color: black;
     margin-top: 65px; 
 }
 
 #start-btn:hover {
-    font-size: 50px;
+    font-size: 40px;
     background-color: white;
 }
 
 #play-again-btn {
-    font-size: 50px;
+    font-size: 40px;
     background-color: #00c1c2;
     color: black;
 }
 
 #play-again-btn:hover {
-    font-size: 50px;
+    font-size: 40px;
     background-color: white;
 }
 
 
-#gameScreen {
+/* #gameScreen {
 
-}
+} */
 
 #score {
     font-size: 38px;
     margin: 25px 0px;
 }
- #message {
+ /* #message {
     margin-top: 25px;
     font-size: 30px;
     text-align: center;
- }
+ } */
 
 
 
