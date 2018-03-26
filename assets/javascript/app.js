@@ -22,7 +22,7 @@ var data = [
             "They wanted to work on projects for the new Disney Channel.",
             "The Animator's Guild was planning a strike.",
             "They hated working with actors.",
-            "They feared that computers would one day put them out of business."
+            "They feared that computers would one day take their jobs."
         ],
         correctAnswer: 3
     },
@@ -35,6 +35,36 @@ var data = [
             "Computer Life Unity"
         ],
         correctAnswer: 2
+    },
+    {
+        question: "Ram's light cycle in the book is green, but in the movie it rezzes up as what color?",
+        answers:[
+            "A lovely shade of Chartreuse.",
+            "Blue",
+            "Gold",
+            "Red"
+        ],
+        correctAnswer: 3
+    },
+    {
+        question: "Who was the film's director?",
+        answers:[
+            "Steven Speilberg",
+            "George Lucas",
+            "Steven Lisberger",
+            "Ron Howard"
+        ],
+        correctAnswer: 2
+    },
+    {
+        question: "Who wrote the novelitization of TRON?",
+        answers:[
+            "Ernest Hemmingway",
+            "Brian Daley",
+            "Gregory Benford",
+            "J. K. Rowling"
+        ],
+        correctAnswer: 1
     }
 ];
 
@@ -90,7 +120,7 @@ function registerClick(){
         }
         else{
             wrongCount++;
-            showMessage("Wrong! The correct answer is " + data[currentQuestionIndex].answers[correctAnswerIndex]);
+            showMessage("Wrong! " + data[currentQuestionIndex].answers[correctAnswerIndex]);
         }
     });
 }
@@ -122,7 +152,7 @@ function timer() {
         }
 
         else{
-            showMessage("You took too long... Next question.");
+            showMessage("You took too long...");
             unansweredCount++;
         }
     }, 1000);
