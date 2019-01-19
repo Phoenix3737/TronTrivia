@@ -33,17 +33,16 @@ ol {
 }
 
 #clock {
-    margin-top: 25px;
     font-size: 40px;
     text-align: center;
+    height: 100px;
+    width: 100%;
+    position:fixed;
+    top:25%;
+    right: 0%;
+    line-height: 100px;
+    margin-top: 50px;
 }
-
-#header {
-    /* text-align: center;
-    font-size: 80px;
-    padding-right: 20px; */
-}
-
 
 .game-over {
     font-size: 70px;
@@ -65,7 +64,7 @@ ol {
     font-size: 40px;
     background-color: #00c1c2;
     color: black;
-    margin-top: 65px; 
+    margin-top: 15%; 
 }
 
 #start-btn:hover {
@@ -84,20 +83,31 @@ ol {
     background-color: white;
 }
 
-
-/* #gameScreen {
-
-} */
+#gameScreen {
+    margin-top: 110px;
+}
 
 #score {
     font-size: 38px;
     margin: 25px 0px;
 }
- /* #message {
-    margin-top: 25px;
-    font-size: 30px;
-    text-align: center;
- } */
+
+.unmute {
+    background-image: url(http://franriavilla.in/images/unmute.png);
+    
+}
+  
+.mute {
+    background-image: url(http://franriavilla.in/images/mute.png);
+    background-size: cover;
+    width: 35px;
+    height: 30px;
+    cursor: pointer;
+    position:fixed;
+    left: 10%;
+    bottom: 10%;
+}
+
 
 
 

@@ -1,3 +1,9 @@
+// window.onload = function() {
+//     document.getElementById("my_audio").play();
+// }
+
+
+
 var correctCount = 0;
 var wrongCount = 0;
 var unansweredCount = 0;
@@ -67,9 +73,6 @@ var data = [
         correctAnswer: 1
     }
 ];
-
-
-
 // HTML template using strings
 function getTemplate(item) {
     return '<div class="row">' +
@@ -77,7 +80,6 @@ function getTemplate(item) {
                     '<div class="question">'+ item.question +'</div>'+
                 '</div>'+
             '</div>'+
-
             '<div class="row">'+
                 '<div class="col-xs-12 text-center">'+
                     '<div class="answers">'+
@@ -110,6 +112,7 @@ function next() {
 }
 
 function registerClick(){
+    var correct = "Correct!";
     $(document).on("click",".answers li", function() {
         if (!disabled) {
             clearInterval(x);
@@ -117,10 +120,14 @@ function registerClick(){
             var correctAnswerIndex = data[currentQuestionIndex].correctAnswer;
             if(index === correctAnswerIndex) {
                 correctCount++;
-                showMessage("Correct!");
+                document.getElementById('clock').style.fontSize = "45px";
+                document.getElementById('clock').style.color = "#00fd2d";
+                showMessage(correct);
             }
             else{
                 wrongCount++;
+                document.getElementById('clock').style.fontSize = "45px";
+                document.getElementById('clock').style.color = "red";
                 showMessage("Wrong! " + data[currentQuestionIndex].answers[correctAnswerIndex]);
             }
             disabled = true;
@@ -133,11 +140,11 @@ function play() {
     registerClick();
     $(".game-over, #gameScreen").hide()
     $("#start-btn").click(function() {
-        $("#gameScreen").show()
-        $(this).hide()
+        $("#music")[0].play();
+        $("#gameScreen").show();
+        $(this).hide();
         timer();
     });
-
     $("#play-again-btn").click(function() {
         window.location.reload();
     });
@@ -145,6 +152,8 @@ function play() {
 }
 
 function timer() {
+    document.getElementById('clock').style.fontSize = "90px";
+    document.getElementById('clock').style.color = "#00c1c2";
     var seconds = 15;
     $("#clock").html((seconds < 10 ? ":0" : ":") + seconds)
     seconds--
@@ -155,6 +164,8 @@ function timer() {
         }
 
         else{
+            document.getElementById('clock').style.fontSize = "45px";
+            document.getElementById('clock').style.color = "#fcdd00";
             showMessage("You took too long...");
             unansweredCount++;
         }
@@ -172,6 +183,11 @@ function showMessage(message) {
 
 $(document).ready(function() {
     play();
+    //  $("#my_audio").get(0).play();
 });
 
+// /assets/audio/1.mp3
 
+// window.onload = function() {
+//     document.getElementById("assets/audio/1.mp3").play();
+// }
