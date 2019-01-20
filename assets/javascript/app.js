@@ -1,9 +1,3 @@
-// window.onload = function() {
-//     document.getElementById("my_audio").play();
-// }
-
-
-
 var correctCount = 0;
 var wrongCount = 0;
 var unansweredCount = 0;
@@ -83,7 +77,6 @@ function getTemplate(item) {
             '<div class="row">'+
                 '<div class="col-xs-12 text-center">'+
                     '<div class="answers">'+
-                        
                         '<ol>'+
                             '<li>' + '<button type="button" id="btn" class="btn btn-lg btn-block" >' + item.answers[0] + '</button>' + '</li>'+
                             '<li>' + '<button type="button" id="btn" class="btn btn-lg btn-block" >' + item.answers[1] + '</button>' + '</li>'+
@@ -141,9 +134,11 @@ function play() {
     $(".game-over, #gameScreen").hide()
     $("#start-btn").click(function() {
         $("#music")[0].play();
+        $("#mute").show();
         $("#gameScreen").show();
         $(this).hide();
         timer();
+        
     });
     $("#play-again-btn").click(function() {
         window.location.reload();
@@ -183,11 +178,21 @@ function showMessage(message) {
 
 $(document).ready(function() {
     play();
-    //  $("#my_audio").get(0).play();
+    $("#mute").hide();
+    //  $("#music").get(0).play();
 });
 
-// /assets/audio/1.mp3
 
-// window.onload = function() {
-//     document.getElementById("assets/audio/1.mp3").play();
-// }
+$(function() {
+    $("#mute").click(function(e) {
+        e.preventDefault();
+        var song = $('audio')[0]
+        if (song.paused){
+            song.play();
+            document.getElementById("mute").src = "http://franriavilla.in/images/mute.png";
+        }else{
+            song.pause();
+            document.getElementById("mute").src = "http://franriavilla.in/images/unmute.png";
+        }
+        });
+});
