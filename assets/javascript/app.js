@@ -65,6 +65,46 @@ var data = [
             "J. K. Rowling"
         ],
         correctAnswer: 1
+    },
+    {
+        question: "What actor played the main character, Kevin Flynn/Clu, in the film?",
+        answers:[
+            "Beau Bridges",
+            "Jeff Bridges",
+            "London Bridges",
+            "Harrison Ford"
+        ],
+        correctAnswer: 1
+    },
+    {
+        question: "The star of TRON, Jeff Bridges, also played what other classic cult hit character?",
+        answers:[
+            "Flash Gordon",
+            "Han Solo",
+            "Mad Max",
+            "The Dude"
+        ],
+        correctAnswer: 3
+    },
+    {
+        question: "In What year did TRON hit theaters?",
+        answers:[
+            "1982",
+            "1978",
+            "1984",
+            "1999"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "The sequel to the film was named...?",
+        answers:[
+            "TRON: Play Again",
+            "TRON: Game Over",
+            "TRON: Legacy",
+            "TRONS"  
+        ],
+        correctAnswer: 2
     }
 ];
 // HTML template using strings
@@ -179,7 +219,6 @@ function showMessage(message) {
 $(document).ready(function() {
     play();
     $("#mute").hide();
-    //  $("#music").get(0).play();
 });
 
 
@@ -196,3 +235,65 @@ $(function() {
         }
         });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// {
+    //     question: "What actor played the main character, Kevin Flynn/Clu, in the film?",
+    //     answers:[
+    //         "Beau Bridges",
+    //         "Jeff Bridges",
+    //         "London Bridges",
+    //         "Harrison Ford"
+    //     ],
+    //     correctAnswer: 1
+    // },
+    // {
+    //     question: "The star of TRON, Jeff Bridges, also played what other classic cult hit character?",
+    //     answers:[
+    //         "Flash Gordon",
+    //         "Han Solo",
+    //         "Mad Max",
+    //         "The Dude"
+    //     ],
+    //     correctAnswer: 3
+    // },
+    // {
+    //     question: "In What year did TRON hit theaters?",
+    //     answers:[
+    //         "1982",
+    //         "1978",
+    //         "1984",
+    //         "1999"
+    //     ],
+    //     correctAnswer: 0
+    // },
+    // {
+    //     question: "The sequel to the film was named...?",
+    //     answers:[
+    //         "TRON: Play Again",
+    //         "TRON: Game Over",
+    //         "TRON: Legacy",
+    //         "TRONS"  
+    //     ],
+    //     correctAnswer: 2
+    // }

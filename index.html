@@ -9,6 +9,7 @@
     <title>Tron Trivia</title>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -34,9 +35,10 @@
                 <div id="message"></div>
             </div>
         </div>
-        <div class="row start">
+        <div class="row start" >
             <div class="col-xs-12 text-center">
-                <button type="button" id="start-btn" class="btn">PRESS START</button>
+                    <div id="content"></div>
+                    <button data-target="play" type="button" id="start-btn" class="btn">PRESS START</button>
             </div>
         </div>
         <div class="row start">
@@ -50,31 +52,18 @@
                 <button type="button" id="play-again-btn" class="btn">Play Again</button>
             </div>
         </div>
-
-       
         <div id="gameScreen" class="text-center"></div>
-
-        <!-- <div class='mute'  onclick="document.getElementById('music')
-        .muted = !document.getElementById('music').muted;$(this).toggleClass('music')">
-        </div> -->
-
-
+        
         <div id="bgAudioControls">
             <a href="#" >
                 <img id="mute" src="http://franriavilla.in/images/mute.png"alt="Sound Off" />
             </a>
-        
-            <audio id="music" autoplay loop preload src="./assets/audio/1.mp3" type="audio/mpeg">
+            <audio id="music" autoplay loop preload 
+                src="./assets/audio/1.mp3" type="audio/mpeg"
+                src="./assets/audio/1.ogg" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
         </div>
-
-
-        <!-- <audio autoplay id="music" preload="auto" loop="loop">
-            <source  src="./assets/audio/1.mp3" type="audio/mpeg">
-        </audio> -->
-      
-
     </div>
     <script src="assets/javascript/app.js"></script>
 
