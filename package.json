@@ -1,0 +1,26 @@
+{
+  "name": "triviagame",
+  "version": "1.0.0",
+  "description": "Test your knowledge of the classic sci-fi film TRON",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Phoenix3737/TriviaGame.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Phoenix3737/TriviaGame/issues"
+  },
+  "homepage": "https://github.com/Phoenix3737/TriviaGame#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
