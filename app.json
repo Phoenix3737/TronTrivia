@@ -1,0 +1,6 @@
+{
+    "name": "Tron Trivia",
+    "description": "Test your knowledge of the classic sci-fi film TRON",
+    "repository": "https://github.com/Phoenix3737/TronTrivia",
+    "keywords": ["node", "express", "static"]
+  }
