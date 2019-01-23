@@ -75,6 +75,9 @@ Trivia = (function () {
         registerClick();
         $("#start-btn").click(function () {
             $("#music")[0].play();
+            $("#music")[0].volume = 0.3;
+            // audio.volume = 0.1;
+
             $("#mute").show();
             $("#gameScreen").show();
             $(this).hide();
