@@ -89,7 +89,7 @@ Trivia = (function () {
             wrongCount = 0;
             unansweredCount = 0;
             currentQuestionIndex = 0;
-            disabled = false;
+            // disabled = false;
             play(_questions);
             $("#score").hide();
             $("#gameScreen").show();
@@ -128,6 +128,7 @@ Trivia = (function () {
                 document.getElementById('clock').style.color = "#fcdd00";
                 showMessage("You took too long...");
                 unansweredCount++;
+                disabled = true;
             }
         }, 1000);
     }
